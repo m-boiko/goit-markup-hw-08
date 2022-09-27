@@ -1,0 +1,136 @@
+.team-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--background-color);
+}
+
+.team__title {
+font-style: normal;
+font-weight: 700;
+font-size: 28px;
+line-height: 1.17;
+text-align: center;
+letter-spacing: 0.03em;
+margin-bottom: 30px;
+}
+
+.team-list__card {
+  background: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 480px) {
+      width: 450px;
+    }
+    
+    @media screen and (min-width: 768px) {
+      width: 354px;
+
+    }   
+
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    } 
+  }
+  
+  @media screen and (min-width: 768px) {
+      .team-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        column-gap: 30px;
+      }
+    }
+@media screen and (min-width: 1200px) {
+      .team-list {
+        flex-wrap: nowrap;
+      }
+    }
+
+// .team-list__img {
+//     height: 460px;   
+// }  
+
+.team-list__card-bottom {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+.team-list__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    color: var(--title-text-color);
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+  }
+  
+.team-list__position {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: var(--primary-text-color);
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 16px;
+  } 
+
+  .social__list {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+  }
+  
+  .social__link {
+    @extend %centeredFlex ;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--primary-white-color);
+    transition: background-color var(--timing-effects);
+
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+    }
+  }
+
+  .social__icon {
+    width: 20px;
+    height: 20px;
+    fill: #AFB1B8; ;
+  }
+
+
+
+
+
+  
+
+
+// .team {
+//     background-color: var(--background-color);
+//     padding-top: 94px;
+//     padding-bottom: 94px;
+//   }
+  
+
+//   .team-list {
+//     display: flex;
+//     margin-top: 50px;
+//     column-gap: 30px;
+//   }
+  
+
+  
+
+  
+
+  
+
+
+  
+
