@@ -1510,7 +1510,7 @@ li {
 @media screen and (min-width: 480px) {
   .modal {
     top: 93px;
-    left: 25%;
+    left: 50%;
     transform: translateX(-50%);
     max-width: 450px;
     width: 100%;
