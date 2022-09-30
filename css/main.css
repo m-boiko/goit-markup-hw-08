@@ -282,7 +282,6 @@ li {
     width: 100%;
     height: 100%;
     background-color: var(--background-color);
-    transform: translateX(100%);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -292,14 +291,26 @@ li {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    transform: translateX(0%);
   }
   .mobile-menu__container {
     position: relative;
-    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    max-width: 480px;
+    width: 100%;
+    max-height: 1000px;
+    height: 100%;
+    padding-left: 20px;
     padding-top: 48px;
     padding-bottom: 48px;
   }
+}
+@media screen and (max-width: 767px) and (min-width: 480px) {
+  .mobile-menu__container {
+    padding-left: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
   .mobile-menu__close-btn {
     position: absolute;
     top: 15px;
@@ -313,6 +324,8 @@ li {
   .mobile-menu__close-btn:hover, .mobile-menu__close-btn:focus {
     fill: var(--accent-color);
   }
+}
+@media screen and (max-width: 767px) {
   .mobile-menu__close-icon {
     width: 40px;
     height: 40px;
@@ -324,7 +337,7 @@ li {
   }
 }
 .mobile-menu-nav {
-  margin-bottom: 306px;
+  margin-bottom: auto;
 }
 
 .mobile-menu-nav-item {
@@ -363,11 +376,16 @@ li {
 }
 
 .mobile-menu-contact-link__tel {
-  font-size: 34px;
+  font-size: 29px;
   line-height: 1.17;
 }
 .mobile-menu-contact-link__tel:hover, .mobile-menu-contact-link__tel:focus {
   color: var(--accent-color);
+}
+@media screen and (min-width: 480px) {
+  .mobile-menu-contact-link__tel {
+    font-size: 34px;
+  }
 }
 
 .mobile-menu-contact-link__mail {
@@ -391,12 +409,17 @@ li {
   font-family: inherit;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 13px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--accent-color);
   text-decoration: none;
   padding-right: 10px;
+}
+@media screen and (min-width: 480px) {
+  .mobile-menu-social-list-link {
+    font-size: 18px;
+  }
 }
 
 .logo {
@@ -489,13 +512,15 @@ li {
   background: #f5f4fa;
   border-radius: 4px;
   border: none;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 22px;
-  padding-right: 22px;
+  padding: 4px 18px;
   transition: background var(--timing-effects);
   transition: color var(--timing-effects);
   transition: box-shadow var(--timing-effects);
+}
+@media screen and (min-width: 480px) {
+  .filter-list__button {
+    padding: 6px 22px;
+  }
 }
 .filter-list__button:hover, .filter-list__button:focus {
   background-color: var(--accent-color);
@@ -509,6 +534,11 @@ li {
   flex-direction: column;
   align-items: center;
   margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-social {
+    align-items: flex-start;
+  }
 }
 
 .footer-social__title {
@@ -566,13 +596,23 @@ li {
 }
 
 .subscribe__input {
-  width: 400px;
+  width: 290px;
   height: 50px;
   padding: 15px 16px;
   background-color: var(--solution-section-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   color: var(--primary-white-color);
+}
+@media screen and (min-width: 480px) {
+  .subscribe__input {
+    width: 400px;
+  }
+}
+@media screen and (min-width: 480px) and (min-width: 1200px) {
+  .subscribe__input {
+    width: 450px;
+  }
 }
 @media screen and (max-width: 1199px) {
   .subscribe__input {
@@ -605,7 +645,8 @@ li {
 
 @media screen and (min-width: 768px) {
   .subscribe {
-    margin-left: 166px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -707,8 +748,12 @@ li {
 .modal-form__check-field {
   display: flex;
   align-items: center;
-  justify-content: center;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .modal-form__check-field {
+    justify-content: center;
+  }
 }
 
 .modal-form__check {
@@ -743,9 +788,14 @@ li {
 
 .modal-form__own-checkbox-text {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 7px;
   line-height: 2;
   color: var(--primary-text-color);
+}
+@media screen and (min-width: 480px) {
+  .modal-form__own-checkbox-text {
+    font-size: 12px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal-form__own-checkbox-text {
@@ -933,25 +983,14 @@ li {
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    width: 1200px;
+    max-width: 1600px;
+    width: 100%;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/desktop_hero.jpeg);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-width: 1200px) and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-width: 1200px) and (min-resolution: 2dppx) and (min-width: 1200px) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/desktop_hero@2x.jpeg");
-  }
-}
-@media screen and (min-width: 1600px) {
-  .hero {
-    width: 1600px;
-    background-image: url(../images/desktop/desktop_hero.jpeg);
-    background-size: contain;
-  }
-}
-@media screen and (min-width: 1600px) and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-width: 1600px) and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-width: 1600px) and (min-resolution: 2dppx) and (min-width: 1200px) {
-  .hero {
-    background-image: url("../images/desktop/desktop_hero@2x.jpeg");
   }
 }
 .hero__container {
@@ -968,7 +1007,6 @@ li {
 }
 
 .hero__title {
-  width: 360px;
   font-size: 26px;
   line-height: 1.6;
   letter-spacing: 0.06em;
@@ -978,6 +1016,18 @@ li {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    width: 360px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    width: 696px;
+    font-weight: 900;
+    font-size: 44px;
+  }
 }
 
 .button {
@@ -995,6 +1045,11 @@ li {
   border: none;
   cursor: pointer;
 }
+@media screen and (min-width: 1200px) {
+  .button {
+    padding: 10px 32px;
+  }
+}
 
 .hero__button {
   display: block;
@@ -1002,42 +1057,6 @@ li {
   margin-right: auto;
 }
 
-@media screen and (min-width: 768px) {
-  .hero__title {
-    width: 696px;
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.4;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    text-align: center;
-    color: var(--primary-white-color);
-  }
-  .button {
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.9;
-    letter-spacing: 0.06em;
-    color: var(--primary-white-color);
-    background: var(--accent-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    cursor: pointer;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background: var(--accent-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    border: none;
-  }
-  .hero__button {
-    padding-right: 32px;
-    padding-left: 32px;
-    margin-top: 30px;
-  }
-}
 .gallery {
   display: flex;
   gap: 30px;
@@ -1200,7 +1219,6 @@ li {
 }
 
 .specifics__title {
-  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1;
@@ -1208,6 +1226,11 @@ li {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
   margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .specifics__title {
+    text-align: center;
+  }
 }
 
 .specifics__desc {
@@ -1242,10 +1265,19 @@ li {
     padding-bottom: 94px;
   }
 }
+.team {
+  background-color: var(--background-color);
+}
+
 .team-container {
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: var(--background-color);
+}
+@media screen and (min-width: 1200px) {
+  .team-container {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .team__title {
@@ -1257,12 +1289,21 @@ li {
   letter-spacing: 0.03em;
   margin-bottom: 30px;
 }
+@media screen and (min-width: 1200px) {
+  .team__title {
+    font-size: 36px;
+  }
+}
 
 .team-list__card {
   background: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  margin-bottom: 30px;
+}
+@media screen and (max-width: 767px) {
+  .team-list__card {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 480px) {
   .team-list__card {
@@ -1285,7 +1326,7 @@ li {
     display: flex;
     flex-wrap: wrap;
     margin-top: 50px;
-    column-gap: 30px;
+    gap: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1338,7 +1379,7 @@ li {
 .social__icon {
   width: 20px;
   height: 20px;
-  fill: #AFB1B8;
+  fill: #afb1b8;
 }
 
 .clients {
@@ -1354,6 +1395,11 @@ li {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
   margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .clients__title {
+    font-size: 36px;
+  }
 }
 
 .client__list {
@@ -1385,7 +1431,7 @@ li {
   fill: var(--accent-color);
 }
 
-@media screen and (min-width: 7680px) {
+@media screen and (min-width: 768px) {
   .cleint__link {
     width: 226px;
   }
@@ -1494,10 +1540,10 @@ li {
 .modal {
   position: absolute;
   padding: 40px;
-  top: 93px;
-  left: 25%;
-  transform: translateX(-50%);
-  max-width: 350px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 528px;
   width: 100%;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1509,23 +1555,12 @@ li {
 }
 @media screen and (min-width: 480px) {
   .modal {
-    top: 93px;
-    transform: translateX(-50%);
-    max-width: 450px;
-    width: 100%;
+    width: 450px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .modal {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-@media screen and (min-width: 768px) {
-  .modal {
-    max-width: 528px;
-    width: 100%;
+    width: 528px;
   }
 }
 

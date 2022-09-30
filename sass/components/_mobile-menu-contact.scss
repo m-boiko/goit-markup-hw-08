@@ -1,28 +1,33 @@
 .mobile-menu-contact {
-    margin-bottom: 64px;
+  margin-bottom: 64px;
 }
 .mobile-menu-contact-item {
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 }
 .mobile-menu-contact-link {
-        font-family: inherit;
-        font-style: normal;
-        font-weight: 500;
-        letter-spacing: 0.02em;
-        color: var(--primary-text-color) ;
-        text-decoration: none;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+  text-decoration: none;
 }
 .mobile-menu-contact-link__tel {
-        font-size: 34px;
-        line-height: 1.17;
-        &:hover , &:focus {
-            color: var(--accent-color);
-        }
+  font-size: 29px;
+  line-height: 1.17;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+  @media screen and (min-width: 480px) {
+    font-size: 34px;
+  }
 }
 .mobile-menu-contact-link__mail {
-        font-size: 24px;
-        line-height: 1.4;
-     &:hover , &:focus {
-            color: var(--accent-color);
-        }
+  font-size: 24px;
+  line-height: 1.4;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
