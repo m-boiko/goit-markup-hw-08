@@ -101,6 +101,10 @@
   &:focus {
     background-color: var(--accent-color);
   }
+  &:hover .social__icon,
+  &:focus .social__icon {
+    fill: var(--primary-white-color);
+  }
 }
 
 .social__icon {

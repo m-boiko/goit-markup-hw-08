@@ -538,6 +538,7 @@ li {
 @media screen and (min-width: 1200px) {
   .footer-social {
     align-items: flex-start;
+    margin-bottom: 0;
   }
 }
 
@@ -643,7 +644,7 @@ li {
   margin-left: 10px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .subscribe {
     margin-left: auto;
     margin-right: auto;
@@ -1380,6 +1381,9 @@ li {
 .social__link:hover, .social__link:focus {
   background-color: var(--accent-color);
 }
+.social__link:hover .social__icon, .social__link:focus .social__icon {
+  fill: var(--primary-white-color);
+}
 
 .social__icon {
   width: 20px;
@@ -1561,6 +1565,7 @@ li {
 }
 @media screen and (min-width: 480px) {
   .modal {
+    padding: 40px;
     width: 450px;
   }
 }
